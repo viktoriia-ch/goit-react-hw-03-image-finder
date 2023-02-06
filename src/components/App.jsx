@@ -59,7 +59,7 @@ class App extends Component {
 
   searchImages = ({ search }) => {
     if (search === this.state.search) {
-      return;
+      return Notify.info('Enter a new request!');
     }
     this.setState({
       search,
