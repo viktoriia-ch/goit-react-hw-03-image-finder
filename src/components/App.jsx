@@ -58,6 +58,9 @@ class App extends Component {
   };
 
   searchImages = ({ search }) => {
+    if (search === this.state.search) {
+      return;
+    }
     this.setState({
       search,
       images: [],

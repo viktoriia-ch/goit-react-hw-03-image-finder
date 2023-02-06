@@ -13,21 +13,15 @@ class Searchbar extends Component {
     event.preventDefault();
     const { onSubmit } = this.props;
     onSubmit({ ...this.state });
-    this.reset();
   };
 
   handleChange = ({ target }) => {
     const { name, value } = target;
+
     this.setState({
       [name]: value,
     });
   };
-
-  reset() {
-    this.setState({
-      search: '',
-    });
-  }
 
   render() {
     const { search } = this.state;
